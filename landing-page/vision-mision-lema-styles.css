@@ -1,0 +1,94 @@
+/* Estilos para las secciones Visión, Misión y Lema, con formato de galería similar a Valores */
+.vision-grid, .mision-grid, .lema-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.vision-item, .mision-item, .lema-item {
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    border-bottom: 3px solid transparent;
+}
+
+.vision-item:hover, .mision-item:hover, .lema-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-bottom: 3px solid var(--primary);
+}
+
+.item-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(44, 82, 130, 0.1);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.item-icon svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--primary);
+    stroke: var(--primary);
+}
+
+.vision-item h4, .mision-item h4, .lema-item h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.vision-item p, .mision-item p, .lema-item p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+/* Estilos específicos para la sección Lema */
+.lema-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Un poco más ancho para el lema */
+}
+
+.lema-item .quote {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin: 1rem 0;
+    position: relative;
+    padding: 0 1.5rem;
+}
+
+.lema-item .quote::before,
+.lema-item .quote::after {
+    content: '"';
+    font-family: Georgia, serif;
+    font-size: 2rem;
+    color: var(--primary-light);
+    position: absolute;
+}
+
+.lema-item .quote::before {
+    left: 0;
+    top: -0.5rem;
+}
+
+.lema-item .quote::after {
+    right: 0;
+    bottom: -1rem;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 480px) {
+    .vision-grid, .mision-grid, .lema-grid {
+        grid-template-columns: 1fr;
+    }
+}

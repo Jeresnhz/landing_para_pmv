@@ -1,0 +1,54 @@
+/* Estilos para la sección de Valores, similares a la sección de Funcionalidades */
+.valores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.valor-item {
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    border-bottom: 3px solid transparent;
+}
+
+.valor-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-bottom: 3px solid var(--primary);
+}
+
+.valor-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(44, 82, 130, 0.1);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.valor-icon svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--primary);
+    stroke: var(--primary);
+}
+
+.valor-item h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.valor-item p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    color: var(--gray);
+}
